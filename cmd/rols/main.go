@@ -36,8 +36,8 @@ func main() {
 				Name:  "start",
 				Usage: "start adapter",
 				Flags: []cli.Flag{
-					&cli.StringFlag{Name: "feed-oracle", DefaultText: "http://localhost:8545", Required: true},
-					&cli.StringFlag{Name: "sequencer", DefaultText: "http://localhost:8645", Required: true},
+					&cli.StringFlag{Name: "feed-oracle", DefaultText: "http://localhost:8545"},
+					&cli.StringFlag{Name: "sequencer", DefaultText: "http://localhost:8645"},
 					&cli.StringFlag{Name: "key", Required: true},
 				},
 				Action: func(ctx *cli.Context) error {
