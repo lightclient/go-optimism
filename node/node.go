@@ -2,7 +2,7 @@ package node
 
 import (
 	log "github.com/inconshreveable/log15"
-	"github.com/lightclient/rols/feed"
+	"github.com/lightclient/go-optimism/feed"
 )
 
 type Config struct {

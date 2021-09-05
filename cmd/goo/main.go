@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/ethereum/go-ethereum/log"
-	"github.com/lightclient/rols/node"
+	"github.com/lightclient/go-optimism/node"
 	"github.com/mattn/go-colorable"
 	"github.com/urfave/cli/v2"
 )
@@ -21,7 +21,7 @@ func init() {
 
 func main() {
 	app := &cli.App{
-		Name:     "rols",
+		Name:     "go-optimism",
 		Usage:    "An adapter between L1 and rollup clients.",
 		Version:  "v0.0.0",
 		Compiled: time.Now(),
