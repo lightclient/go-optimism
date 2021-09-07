@@ -37,8 +37,7 @@ func main() {
 				Usage: "start adapter",
 				Flags: []cli.Flag{
 					&cli.StringFlag{Name: "feed-oracle", DefaultText: "http://localhost:8545"},
-					&cli.StringFlag{Name: "sequencer", DefaultText: "http://localhost:8645"},
-					&cli.StringFlag{Name: "key", Required: true},
+					&cli.StringFlag{Name: "feed-contract", DefaultText: "0x4BF681894abEc828B212C906082B444Ceb2f6cf6"},
 				},
 				Action: func(ctx *cli.Context) error {
 					output := colorable.NewColorableStderr()
@@ -46,9 +45,7 @@ func main() {
 					glogger.SetHandler(ostream)
 
 					config := &node.Config{
-						FeedOracle: ctx.String("feed-oracle"),
-						Sequencer:  ctx.String("sequencer"),
-						SigningKey: ctx.String("key"),
+						FeedProvider: ctx.String("feed-provider"),
 					}
 
 					node, err := node.New(config)
