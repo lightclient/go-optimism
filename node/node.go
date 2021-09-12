@@ -7,19 +7,10 @@ import (
 
 type Config struct {
 	// URL of feed oracle.
-	FeedOracle string
+	FeedProvider string
 
-	//
+	// Canon address of feed oracle.
 	FeedContract string
-
-	// URL of sequencer RPC.
-	Sequencer string
-
-	// Private key for transaction signer.
-	SigningKey string
-
-	// Number of blocks to trial L1.
-	ConfirmationDepth uint64
 }
 
 type Node struct {
@@ -31,6 +22,6 @@ func New(conf *Config) (*Node, error) {
 }
 
 func (n *Node) Start() error {
-	log.Info("Starting rollup synchronizer")
+	log.Info("Starting go-optimism . . .")
 	return nil
 }

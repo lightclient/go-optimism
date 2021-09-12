@@ -1,4 +1,4 @@
-module github.com/lightclient/rols
+module github.com/lightclient/go-optimism
 
 go 1.16
 
